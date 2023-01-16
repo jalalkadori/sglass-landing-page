@@ -21,13 +21,16 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+                    <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">A Propos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contactez-Nous</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Prendre un RDV</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">FAQs</a>
@@ -89,9 +92,8 @@
         </div>
     </div>
 
-    <div class="container-fluid py-5"></div>
 
-    <div class="container">
+    <div class="container p-5 border-bottom">
         <div class="row">
             <div class="col">
                 <div class="d-flex gap-3 align-items-center">
@@ -132,11 +134,76 @@
         </div>
     </div>
 
+    <div class="container p-5">
+        <div class="row">
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item fs-5">S GLASS AUTO</li>
+                    <li class="list-group-item">A Propos</li>
+                    <li class="list-group-item">Contactez-Nous</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item fs-5">Support</li>
+                    <li class="list-group-item">FAQs</li>
+                    <li class="list-group-item">Service client</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item fs-5">Explorer</li>
+                    <li class="list-group-item">Service à domicile</li>
+                    <li class="list-group-item">Nos produits</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
-
+    <footer>
+        <div class="container py-1 text-center">
+            <p>©2019 S GLASS AUTO, Inc. Tous droits réservés</p>
+        </div>
+    </footer>
 
 
 
     <script src="./main.js"></script>
+    <script>
+    var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?3254';
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = url;
+    var options = {
+  "enabled":true,
+  "chatButtonSetting":{
+      "backgroundColor":"#4dc247",
+      "ctaText":"Contact Nous",
+      "borderRadius":"25",
+      "marginLeft":"0",
+      "marginBottom":"50",
+      "marginRight":"50",
+      "position":"right"
+  },
+  "brandSetting":{
+      "brandName":"JKAD",
+      "brandSubTitle":"Typically replies within a day",
+      "brandImg":"https://cdn.clare.ai/wati/images/WATI_logo_square_2.png",
+      "welcomeText":"Hi there!\nHow can I help you?",
+      "messageText":"Hello, I have a question about {{page_link}}",
+      "backgroundColor":"#0a5f54",
+      "ctaText":"Start Chat",
+      "borderRadius":"25",
+      "autoShow":false,
+      "phoneNumber":"212601949570"
+  }
+};
+    s.onload = function() {
+        CreateWhatsappChatWidget(options);
+    };
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+</script>
   </body>
 </html>
