@@ -20,15 +20,15 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
+                <li class="nav-item">   
                     <a class="nav-link active" aria-current="page" href="./index.html">Accueil</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">A Propos</a>
+                    <a class="nav-link" href="#about">A Propos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contactez-Nous</a>
-                </li>
+                    <a class="nav-link" href="#contact">Contactez-Nous</a>
+                </li>   
                 <li class="nav-item">
                     <a class="nav-link" href="#">Prendre un RDV</a>
                 </li>
@@ -91,7 +91,76 @@
             </div>
         </div>
     </div>
+     <!-- About section  -->
+    <div class="container py-5" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5>A Propos</h5>
+                    <p>Qui Somme Nous ?</p>
+                    <p>LA SOCIÉTÉ S GLASS AUTO est l'expert de la réparation et remplacement de vitrages automobile sur le lieu de votre choix (mobile). Cela a été rendu possible par l
+                        a mise en oeuvre de process adaptés à chaque étape de la prise d'appel gérée par notre Services 
+                        clients à la réalisation des travaux par nos techniciens qualifiés en passant par toute la gestion des dossiers, des démarches auprès des assurances etc.
+                    </p>
+                    <p>Pourquoi choisir s glass auto ?</p>
+                    <ul class="list-group list-group-flush fs-6">
+                        <li class="list-group-item">✔ Franchise offerte a 100% quelles que soit votre assurance</li>
+                        <li class="list-group-item">✔ Vitrages certifiés norme européenne 43R</li>
+                        <li class="list-group-item">✔ Déplaçement gratuit a domicile ou au travail</li>
+                        <li class="list-group-item">✔ Assurance casse à vie</li>
+                        <li class="list-group-item">✔ Vous n'avez aucune démarche à faire ( Gestion des formalités d'assurance )</li>
+                        <li class="list-group-item">✔ Collage garanti à vie </li>
+                        <li class="list-group-item">✔ Tarif constructeur respecté</li>
+                        <li class="list-group-item">✔ Intervention quelles que soient les conditions climatiques</li>
+                        <li class="list-group-item">✔ Aucun frais à avancer, 0€ de votre poche</li>
+                    </ul>
 
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </div>
+    </div> 
+
+    <!-- Contact Us section  -->
+
+    <div class="container" id="contact">
+        <div class="container text-center py-2">
+            <h5>Centre d'aide</h5>
+            <p>Contacter notre service clients, disponible 24h/24.</p>
+        </div>  
+        
+        <form class="py-5" onsubmit="return false;"> 
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label for="nom">Nom</label>
+                        <input type="text" class="form-control border-dark" id="name" aria-describedby="emailHelp" placeholder="Nom">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control border-dark" id="email" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                </div>  
+                <div class="col">
+                    <div class="form-group">
+                        <label for="telephone">Numéro de téléphone mobile</label>
+                        <input type="phone" class="form-control border-dark" id="phone" aria-describedby="emailHelp" placeholder="Numèro de téléphone">
+                    </div>
+                </div>
+            </div>  
+            <div class="col py-3">
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea type="email" class="form-control border-dark" id="message" aria-describedby="emailHelp" placeholder="Message" cols="15" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="col">
+                <button class="btn btn-primary" type="submit" onclick="SendMail()">Envoyer</button>
+            </div> 
+        </form>
+    </div>
 
     <div class="container p-5 border-bottom">
         <div class="row">
@@ -157,11 +226,11 @@
                     <li class="list-group-item">Nos produits</li>
                 </ul>
             </div>
-        </div>
+        </div>  
     </div>
 
     <footer>
-        <div class="container py-1 text-center">
+        <div class="container py-1 text-center">    
             <p>©2019 S GLASS AUTO, Inc. Tous droits réservés</p>
         </div>
     </footer>
@@ -169,8 +238,11 @@
 
 
     <script src="./main.js"></script>
-    <script>
-    
-</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function(){
+            emailjs.init("0qhssEDmjTRQNuc_R");
+        })();
+    </script>
   </body>
 </html>

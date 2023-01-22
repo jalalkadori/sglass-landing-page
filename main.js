@@ -90,5 +90,29 @@ var url = 'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget
     s.onload = function() {
         CreateWhatsappChatWidget(options);
     };
-    var x = document.getElementsByTagName('script')[0];
-    x.parentNode.insertBefore(s, x);
+   
+    // function to send the email 
+
+    function SendMail() {
+        var infos = {
+            name : document.getElementById('name').value,
+            email : document.getElementById('email').value,
+            phone : document.getElementById('phone').value,
+            message : document.getElementById('message').value,
+        }
+
+        const serviceID = "service_yyw8s6i";
+        const templateID = "template_dpvmp8h";
+
+        emailjs.send(serviceID, templateID, infos)
+        .then((res) => {
+            document.getElementById('name').value = "";
+            document.getElementById('email').value = "";
+            document.getElementById('phone').value = "";
+            document.getElementById('message').value = "";
+            console.log(res);
+            alert("your message has been sent !")
+        }).catch((err) => console.log(err));
+    }
+
+    
